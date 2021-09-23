@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font-size</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ricardo</h1>
+        <p id="result"></p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi magnam at labore inventore sunt, perspiciatis porro temporibus necessitatibus suscipit, minima culpa eos, iusto obcaecati soluta maxime aperiam totam accusantium laudantium.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi magnam at labore inventore sunt, perspiciatis porro temporibus necessitatibus suscipit, minima culpa eos, iusto obcaecati soluta maxime aperiam totam accusantium laudantium.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi magnam at labore inventore sunt, perspiciatis porro temporibus necessitatibus suscipit, minima culpa eos, iusto obcaecati soluta maxime aperiam totam accusantium laudantium.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi magnam at labore inventore sunt, perspiciatis porro temporibus necessitatibus suscipit, minima culpa eos, iusto obcaecati soluta maxime aperiam totam accusantium laudantium.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi magnam at labore inventore sunt, perspiciatis porro temporibus necessitatibus suscipit, minima culpa eos, iusto obcaecati soluta maxime aperiam totam accusantium laudantium.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi magnam at labore inventore sunt, perspiciatis porro temporibus necessitatibus suscipit, minima culpa eos, iusto obcaecati soluta maxime aperiam totam accusantium laudantium.</p>
+    </div>    
+
+    <script>
+        const result = document.querySelector('#result')
+        const h1 = document.querySelector('h1')
+        const p = document.querySelector('p')
+
+        const checkSizes = () => {
+            const h1Styles = window.getComputedStyle(h1)
+            const pStyles = window.getComputedStyle(p)
+
+            const h1FontSize = h1Styles.getPropertyValue('font-size')
+            const pFontSize = pStyles.getPropertyValue('font-size')
+
+            result.innerText = `O tamanho de H1 é ${h1FontSize} e o p é ${pFontSize}`
+        }
+
+        setInterval(checkSizes, 500)
+        
+
+
+    </script>
+</body>
+</html>
